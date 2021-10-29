@@ -9,7 +9,7 @@ Dichiariamo chi ha vinto.
 
 
 // Facciamo scegliere all'utente pari o dispari
-let userEvendOdd = prompt('Scegli pari o dispari');
+let userEvendOdd = prompt('Inserisci pari o dispari');
 
 // Creiamo un ciclo in modo tale che fino a quando l'utente non inserisce in modo corretto pari o dispari non può andare avanti!
 while ((userEvendOdd !== 'pari') && (userEvendOdd !== 'dispari')) {
@@ -46,31 +46,21 @@ let win = '';
 
 // Decretiamo il vincitore
 if (result === userEvendOdd) {
-  win = `
-  <p>
-    Complimenti hai vinto
-  </p>  
-  `;
-  console.log('Utente è il vincitore');
+  win = ` Complimenti hai vinto`;
+  // console.log('Utente è il vincitore');
 } else {
-  win = `
-  <p>
-    Il pc ha vinto
-  </p>  
-  `;
-  console.log('Pc è il vincitore');
+  win = `Il pc ha vinto`;
+  // console.log('Pc è il vincitore');
 }
 
-// Inseriamo il utto nell HTML 
+// Inseriamo il tutto nell HTML 
 const output = document.getElementById('gioco');
 
 output.innerHTML = `
-<p>
   Hai scelto ${userEvendOdd} <br>
   Il numero da te scelto è ${userNumber} e quello del pc è ${pcNumber} <br>
   La somma dei due numeri è ${sumNumber} quindi è ${result} <br>
-  ${win}
-</p>  
+  ${win} 
 `;
 
 
